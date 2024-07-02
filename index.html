@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+
+        <title> Student ID Card Printer. </title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="box">
+                <h3 class="title"> Student Details: </h3>
+
+                <form id="studentForm">
+                    <div class="fields">
+                        <label for="SchoolName"> School Name: </label>
+                        <input id="SchoolName" type="text" required>
+                    </div>
+
+                    <div class="fields">
+                        <label for="StudentName"> Student Name: </label>
+                        <input id="StudentName" type="text" required>
+                    </div>
+
+                    <div class="fields">
+                        <label for="DateOfBirth">Date of Birth:</label>
+                        <input id="DateOfBirth" type="date" required>
+                    </div>
+
+                    <div class="fields">
+                        <label for="Class">Class:</label>
+                        <input id="Class" type="text" required>
+                    </div>
+
+                    <div class="fields">
+                        <label for="RollNumber">Roll Number:</label>
+                        <input id="RollNumber" type="number" required>
+                    </div>
+
+                    <div class="fields">
+                        <label for="ContactNumber"> Contact Number: </label>
+                        <input id="ContactNumber" type="tel" required>
+                    </div>
+
+                    <div class="fields">
+                        <button class="Button" type="button" onclick="UpdateCard()"> Submit Form. </button>
+                        <button class="Button" type="button" onclick="ClearAll()"> Clear All. </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="box">
+                <h3 class="title"> Preview ID Card: </h3>
+
+                <div class="id-card">
+                    <h4 id="SchoolNameValue"> School Name </h4>
+                    <img id="StudentImage" src="" alt="Student Profile Image.">
+                    <p><strong> Student Name: </strong> <span id="StudentNameValue"> User's Name </span></p>
+                    <p><strong> Date of Birth: </strong> <span id="DateOfBirthValue"> User's DOB </span></p>
+                    <p><strong> Class: </strong> <span id="ClassValue"> User's Class </span></p>
+                    <p><strong> Roll Number: </strong> <span id="RollNumberValue"> User's Roll Number </span></p>
+                    <p><strong> Contact Number: </strong> <span id="ContactNumberValue"> User's Contact Number </span></p>
+                </div>
+
+                <button class="Button PrintButton" type="button"> Print ID Card. </button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
